@@ -13,6 +13,11 @@ namespace Trabalho1
         public double con_gas { get; set; } = 12;
 
       
-       
+       public void edidar_dados(double gas, double eta)
+        {
+            this.con_eta = eta;
+            this.con_gas = gas;
+        }
     }
+
 }
