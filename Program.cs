@@ -41,7 +41,7 @@
                         Console.Write("Consumo de gasolina: ");
                         double con_gas = double.Parse(Console.ReadLine());
 
-                        carro.edidar_dados(con_gas, con_eta);
+                        carro.editar_dados(con_gas, con_eta);
 
                         break;
                     case "sair":
