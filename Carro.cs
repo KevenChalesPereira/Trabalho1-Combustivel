@@ -9,8 +9,8 @@ namespace Trabalho1
     internal class Carro
     {
         public string tipo_car { get; set; }
-        public double con_eta { get; set; } = 8;
-        public double con_gas { get; set; } = 12;
+        public double con_eta { get; set; } = 0;
+        public double con_gas { get; set; } = 0;
 
       
        public void editar_dados(double gas, double eta)

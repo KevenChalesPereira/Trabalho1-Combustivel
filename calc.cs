@@ -30,9 +30,9 @@ namespace Trabalho1
                 resposta = "Não existe variação de preço";
 
             else if (v_eta < conta)
-               resposta = "Etanol";
+               resposta = "Esta compensando o Etanol";
             else
-                resposta = "Gasolina";
+                resposta = "Esta compensando a Gasolina";
 
             return resposta;
         }
