@@ -22,7 +22,7 @@
                     case "alcool":
                         Console.Write("Valor do etanol:");
                         double eta = double.Parse(Console.ReadLine());
-                        Console.WriteLine("A unica opção disponivel para seu tipo de carro é etanolllllLl!");
+                        Console.WriteLine("A unica opção disponivel para seu tipo de carro é etano!");
                         break;
 
                     case "flex":
