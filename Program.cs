@@ -225,7 +225,6 @@
 
                     while (validar_opcao != "gasolina" && validar_opcao != "alcool" && validar_opcao != "flex ")
 {
-    Console.Clear();
     Console.Write("DIGITE UMA OPÇÃO VALIDA: ");
     validar_opcao = Console.ReadLine();
 }
