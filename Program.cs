@@ -223,6 +223,13 @@
                     Console.Write("Informe o tipo do carro: gasolina, alcool ou flex: ");
                     string validar_opcao = Console.ReadLine();
 
+                    while (validar_opcao != "gasolina" && validar_opcao != "alcool" && validar_opcao != "flex ")
+{
+    Console.Clear();
+    Console.Write("DIGITE UMA OPÇÃO VALIDA: ");
+    validar_opcao = Console.ReadLine();
+}
+
                     double con_gas;
                     double con_eta;
 
