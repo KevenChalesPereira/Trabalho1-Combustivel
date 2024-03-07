@@ -1,4 +1,4 @@
-﻿namespace Trabalho1
+namespace Trabalho1
 {
     internal class Program
     {
@@ -26,7 +26,7 @@
 
                 while (opcao != "1" && opcao != "2" && opcao != "0")
                 {
-                    Console.WriteLine("DIGITE UMA OPÇÃO VALIDA: ");
+                    Console.Write("DIGITE UMA OPÇÃO VALIDA: ");
                     opcao = Console.ReadLine();
                 }
 
@@ -46,24 +46,26 @@
 
                         switch (carro.tipo_car)
                         {
-                            case "gasolina":
 
+                            case "gasolina":
+                                Console.Clear();
                                 string val_gasolina;
 
                                 Console.Write("Valor da gasolina:");
                                 val_gasolina = Console.ReadLine();
                                 double gas;
 
-                                while (!double.TryParse(val_gasolina, out gas))
+                                while (!double.TryParse(val_gasolina, out gas) || gas < 0)
                                 {
-                                    Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                    Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                     val_gasolina = Console.ReadLine();
                                 }
 
+                                Console.Clear();
                                 Console.WriteLine("A unica opção disponivel para seu tipo de carro é gasolina!");
 
 
-                                Console.Write("Deseja continuar ? (s/n):");
+                                Console.Write("\nDeseja continuar ? (s/n):");
                                 string continuar = Console.ReadLine();
 
                                 while (continuar != "s" && continuar != "n")
@@ -88,22 +90,23 @@
                                 break;
 
                             case "alcool":
-
+                                Console.Clear();
                                 string val_alcool;
 
                                 Console.Write("Valor do etanol:");
                                 val_alcool = Console.ReadLine();
                                 double eta;
 
-                                while (!double.TryParse(val_alcool, out eta))
+                                while (!double.TryParse(val_alcool, out eta) || eta < 0)
                                 {
-                                    Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                    Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                     val_alcool = Console.ReadLine();
                                 }
 
+                                Console.Clear();
                                 Console.WriteLine("A unica opção disponivel para seu tipo de carro é etanol!");
 
-                                Console.Write("Deseja continuar ? (s/n):");
+                                Console.Write("\nDeseja continuar ? (s/n):");
                                 string continuar1 = Console.ReadLine();
 
                                 while (continuar1 != "s" && continuar1 != "n")
@@ -128,6 +131,7 @@
 
                             case "flex":
 
+                                Console.Clear();
                                 string val_v_gas;
                                 string val_v_eta;
 
@@ -135,26 +139,29 @@
                                 val_v_gas = Console.ReadLine();
                                 double v_gas;
 
-                                while (!double.TryParse(val_v_gas, out v_gas))
+                                while (!double.TryParse(val_v_gas, out v_gas) || v_gas < 0)
                                 {
-                                    Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                    Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                     val_v_gas = Console.ReadLine();
+                                    
                                 }
 
+                                Console.Clear();
                                 Console.Write("Valor do etanol:");
                                 val_v_eta = Console.ReadLine();
                                 double v_eta;
 
-                                while (!double.TryParse(val_v_eta, out v_eta))
+                                while (!double.TryParse(val_v_eta, out v_eta) || v_eta < 0)
                                 {
-                                    Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                    Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                     val_v_eta = Console.ReadLine();
                                 }
 
+                                Console.Clear();
                                 Console.WriteLine(calculo.calcular(carro.con_gas, carro.con_eta, v_gas, v_eta));
 
 
-                                Console.Write("Deseja continuar ? (s/n):");
+                                Console.Write("\nDeseja continuar ? (s/n):");
                                 string continuar2 = Console.ReadLine();
 
                                 while (continuar2 != "s" && continuar2 != "n")
@@ -204,7 +211,7 @@
                                 break;
 
                             default:
-                                Console.WriteLine("Informe uma opção valida!");
+                                Console.WriteLine("Informe uma opção valida!\n");
                                 break;
 
                                 
@@ -223,11 +230,11 @@
                     Console.Write("Informe o tipo do carro: gasolina, alcool ou flex: ");
                     string validar_opcao = Console.ReadLine();
 
-                    while (validar_opcao != "gasolina" && validar_opcao != "alcool" && validar_opcao != "flex ")
-{
-    Console.Write("DIGITE UMA OPÇÃO VALIDA: ");
-    validar_opcao = Console.ReadLine();
-}
+                    while (validar_opcao != "gasolina" && validar_opcao != "alcool" && validar_opcao != "flex")
+                    {
+                        Console.Write("DIGITE UMA OPÇÃO VALIDA: ");
+                        validar_opcao = Console.ReadLine();
+                    }
 
                     double con_gas;
                     double con_eta;
@@ -235,13 +242,13 @@
                     switch (validar_opcao)
                     {
                         case "gasolina":
-
+                            Console.Clear();
                             Console.Write("Digite o consumo do seu carro na gasolina: ");
                             validar_gasolina = Console.ReadLine();
                             
-                            while (!double.TryParse(validar_gasolina, out con_gas))
+                            while (!double.TryParse(validar_gasolina, out con_gas) || con_gas < 0)
                             {
-                                Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                 validar_gasolina = Console.ReadLine();
                             }
 
@@ -251,14 +258,14 @@
                             break;
 
                         case "alcool":
-
+                            Console.Clear();
                             Console.Write("Digite o consumo do seu carro no etanol: ");
                             validar_etanol = Console.ReadLine();
                             
 
-                            while (!double.TryParse(validar_etanol, out con_eta))
+                            while (!double.TryParse(validar_etanol, out con_eta) || con_eta < 0)
                             {
-                                Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                 validar_etanol = Console.ReadLine();
                             }
 
@@ -268,22 +275,23 @@
                             break;
 
                         case "flex":
-
+                            Console.Clear();
                             Console.Write("Digite o consumo do seu carro no etanol: ");
                             validar_etanol = Console.ReadLine();
 
-                            while (!double.TryParse(validar_etanol, out con_eta))
+                            while (!double.TryParse(validar_etanol, out con_eta) || con_eta < 0)
                             {
-                                Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                 validar_etanol = Console.ReadLine();
                             }
 
+                            Console.Clear();
                             Console.Write("Digite o consumo do seu carro na gasolina: ");
                             validar_gasolina = Console.ReadLine();                       
 
-                            while (!double.TryParse(validar_gasolina, out con_gas))
+                            while (!double.TryParse(validar_gasolina, out con_gas) || con_gas < 0)
                             {
-                                Console.WriteLine("DIGITE UMA OPÇÃO VÁLIDA: ");
+                                Console.Write("DIGITE UMA OPÇÃO VÁLIDA: ");
                                 validar_gasolina = Console.ReadLine();
                             }
 
@@ -293,7 +301,7 @@
                             break;
 
                         default:
-                            Console.WriteLine("Informe uma opção valida!");
+                            Console.Write("Informe uma opção valida\n");
                             break;
                     }
 
@@ -302,7 +310,7 @@
                 if (opcao == "0")
                 {
                     Console.Clear();
-                    Console.WriteLine("Deseja realmente sair do programa (s/n) ?");
+                    Console.Write("Deseja realmente sair do programa (s/n) ? :");
                     string saindo = Console.ReadLine();
 
                     while (saindo != "s" && saindo != "n")
